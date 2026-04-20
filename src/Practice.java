@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Practice {
     /**
@@ -45,5 +45,19 @@ public class Practice {
 
         }
         return longestWord;
+    }
+
+    public static int longerShorter(HashSet<String> words, int longer, int shorter){
+        int longerWords = 0;
+        int shorterWords = 0;
+        for(String word : words){
+            if(word.length() > longer){
+                longerWords++;
+            }
+            if(word.length() < shorter){
+                shorterWords++;
+            }
+        }
+        return longerWords + shorterWords;
     }
 }

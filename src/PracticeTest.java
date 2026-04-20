@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class PracticeTest {
 
@@ -38,6 +38,24 @@ public class PracticeTest {
 
         //assert
         assertEquals("Cluelessness", actual);
+    }
+
+        @Test
+        void testLongerShorterCountsCorrectly(){
+        //arrange
+        HashSet<String> words = new HashSet<>();
+        words.add("Hello");
+        words.add("Complete");
+        words.add("Poop");
+        words.add("Bartender");
+        words.add("Monkeys");
+        words.add("Hey");
+
+        //act
+        int actual = Practice.longerShorter(words, 7, 5);
+
+        //assert
+        assertEquals(4, actual);
     }
     
 }
