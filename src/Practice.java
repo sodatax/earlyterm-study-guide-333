@@ -62,7 +62,7 @@ public class Practice {
         return longerWords + shorterWords;
     }
 
-    // Find the difference between the how many odd and even numbers there are in Hashmap values
+    // Find the difference between the how many odd and even numbers there are in HashMap values
     public static int evenOddDiff(HashMap<Integer, Integer> value){
         int oddCount = 0;
         int evenCount = 0;
@@ -75,5 +75,22 @@ public class Practice {
             }
         }
         return oddCount-evenCount;
+    }
+
+    // Find the second-largest number in HashMap Key
+    public static int secondLargest(HashMap<Integer, Integer> value){
+        ArrayList<Integer> numbers = new ArrayList<>();
+        int result = 0;
+
+        for(int i : value.keySet()){
+            numbers.add(i);
+        }
+
+        Collections.sort(numbers);
+        int secondLastIndex = numbers.size()-2;
+
+        result = numbers.get(secondLastIndex);
+
+        return result;
     }
 }

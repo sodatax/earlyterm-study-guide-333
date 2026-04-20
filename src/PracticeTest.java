@@ -6,7 +6,7 @@ import java.util.*;
 
 public class PracticeTest {
 
-    // TODO: Make more tests for maxDiff
+    // maxDiff()
     @Test
     void testMaxDiffPositiveAndNegative() {
         // Arrange
@@ -21,7 +21,7 @@ public class PracticeTest {
     }
     
 
-    // TODO: Make tests for each problem you solve
+    // longestCharWord()
     @Test
     void testLongestCharWordShowsLongestWord(){
         //arrange
@@ -40,6 +40,7 @@ public class PracticeTest {
         assertEquals("Cluelessness", actual);
     }
 
+    // longerShorter()
     @Test
     void testLongerShorterCountsCorrectly(){
         //arrange
@@ -58,6 +59,7 @@ public class PracticeTest {
         assertEquals(4, actual);
     }
 
+    // evenOddDiff
     @Test
     void testEvenOddDiffShowsDifference(){
         //arrange
@@ -73,6 +75,24 @@ public class PracticeTest {
 
         //assert
         assertEquals(1, actual);
+    }
+
+    // secondLargest
+    @Test
+    void testSecondLargestShowsSencondLargestNumber(){
+        //arrange
+        HashMap<Integer, Integer> values = new HashMap<>();
+        values.put(1, 5);
+        values.put(5, 1);
+        values.put(9, 8);
+        values.put(2, 6);
+        values.put(12, 3);
+
+        //act
+        int actual = Practice.secondLargest(values);
+
+        //assert
+        assertEquals(9, actual);
     }
     
 }
