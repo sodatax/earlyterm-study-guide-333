@@ -11,6 +11,7 @@ public class Practice {
         int result = 0;
         int smallest = 0;
         int biggest = 0;
+
         smallest = nums[0];
         biggest = nums[0];
 
@@ -59,5 +60,20 @@ public class Practice {
             }
         }
         return longerWords + shorterWords;
+    }
+
+    // Find the difference between the how many odd and even numbers there are in Hashmap values
+    public static int evenOddDiff(HashMap<Integer, Integer> value){
+        int oddCount = 0;
+        int evenCount = 0;
+
+        for(int i : value.values()){
+            if(i%2 == 0){
+                evenCount++;
+            }else{
+                oddCount++;
+            }
+        }
+        return oddCount-evenCount;
     }
 }

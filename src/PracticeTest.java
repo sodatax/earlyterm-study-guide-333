@@ -40,8 +40,8 @@ public class PracticeTest {
         assertEquals("Cluelessness", actual);
     }
 
-        @Test
-        void testLongerShorterCountsCorrectly(){
+    @Test
+    void testLongerShorterCountsCorrectly(){
         //arrange
         HashSet<String> words = new HashSet<>();
         words.add("Hello");
@@ -56,6 +56,23 @@ public class PracticeTest {
 
         //assert
         assertEquals(4, actual);
+    }
+
+    @Test
+    void testEvenOddDiffShowsDifference(){
+        //arrange
+        HashMap<Integer, Integer> values = new HashMap<>();
+        values.put(1, 5);
+        values.put(2, 1);
+        values.put(3, 8);
+        values.put(4, 6);
+        values.put(5, 3);
+
+        //act
+        int actual = Practice.evenOddDiff(values);
+
+        //assert
+        assertEquals(1, actual);
     }
     
 }
