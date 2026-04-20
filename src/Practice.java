@@ -38,7 +38,7 @@ public class Practice {
         String longestWord = "";
 
         for(String i : words){
-            if(i.charAt(0) == letter){
+            if(Character.toUpperCase(i.charAt(0)) == Character.toUpperCase(letter)){
                 if(longestWord.length() < i.length()){
                     longestWord = i;
                 }
