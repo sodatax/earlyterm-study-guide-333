@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 public class PracticeTest {
 
     // TODO: Make more tests for maxDiff
@@ -20,6 +22,23 @@ public class PracticeTest {
     
 
     // TODO: Make tests for each problem you solve
+    @Test
+    void testLongestCharWordShowsLongestWord(){
+        //arrange
+        ArrayList<String> words = new ArrayList<>();
+        words.add("Hello");
+        words.add("Complete");
+        words.add("Cluelessness");
+        words.add("Bartender");
+        words.add("Monkey");
+        words.add("Carpenter");
+
+        //act
+        String actual = Practice.longestCharWord(words, 'C');
+
+        //assert
+        assertEquals("Cluelessness", actual);
+    }
     
 }
 

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -6,8 +8,22 @@ public class Practice {
      * @return the difference between the largest and smallest number
      */
     public static int maxDiff(int[] nums) {
-        // TODO: implement this
-        return -1;
+        int result = 0;
+        int smallest = 0;
+        int biggest = 0;
+        smallest = nums[0];
+        biggest = nums[0];
+
+        for(int i : nums){
+            if(i < smallest){
+                smallest = i;
+            }
+            if(i > biggest){
+                biggest = i;
+            }
+            result = biggest-smallest;
+        }
+        return result;
     }
 
 
@@ -16,4 +32,18 @@ public class Practice {
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
     // do maxDiff with an array, the next question with a Set, etc.
+
+    public static String longestCharWord(ArrayList<String> words, Character letter){
+        String longestWord = "";
+
+        for(String i : words){
+            if(i.charAt(0) == letter){
+                if(longestWord.length() < i.length()){
+                    longestWord = i;
+                }
+            }
+
+        }
+        return longestWord;
+    }
 }
